@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20;
+            background-color: #f4f4f4;
+        }
+
+        /* 导航栏样式 */
+        header {
+            background-color: #f4f4f4;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 语言切换按钮样式 */
+        button {
+            background: none;
+            border: none;
+            color: #1d6f6a;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* 主内容区域样式 */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* App 图标展示区域样式 */
+       .app-icon {
+            width: 180px;
+            height: 180px;
+            margin: 0px;
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+
+        /* 标题样式 */
+        h1,
+        h2 {
+            color: #1d6f6a;
+            text-align: left;
+        }
+
+        /* 描述文本样式 */
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        /* 图片容器样式 */
+       .image-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0px;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: left; */
+            /* gap: 20px; */
+            /* margin: 50px 0; */
+        }
+
+        /* 截图样式 */
+       .screenshot {
+            width: 180px;
+            height: 180px;
+            object-fit: scale-down;
+            margin: 0px;
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+    </style>
+    <title>Earthquake Activity</title>
+</head>
+
+<body>
+    <header>
+        <h1>Earthquake Activity</h1>
+        <button id="language-toggle">
+            <i class="fa-solid fa-globe"></i> English
+        </button>
+    </header>
+    <main>
+        <div class="image-container">
+            <img class="app-icon" src="./RES/icon.png">
+            <img class="screenshot" src="./RES/screenshot.png">
+            <img class="screenshot" src="./RES/screenshot2.png">
+            <img class="screenshot" src="./RES/screenshot3.png">
+        </div>
+        <!-- 这里放置 App 图标，目前用一个灰色区域代替 -->
+        <h2>全球地震动态尽在掌握</h2>
+        <p>想第一时间了解全球地震动态？Earthquake Activity 是你的专业地震信息伙伴！无论是科学爱好者、地理教师，还是对地球脉动充满好奇的你，都能通过这款应用，轻松掌握全球地震最新情报。</p>
+        <h2>三大权威数据加持，信息准确及时</h2>
+        <p>Earthquake Activity 整合 cenc（中国地震台网）、usgs（美国地质调查局）、emsc（欧洲地中海地震中心） 三大权威机构的数据资源，覆盖全球各个角落。从环太平洋地震带到地中海 - 喜马拉雅地震，任何地震活动都逃不过我们的 “眼睛”，确保你获取的每条地震信息都真实、准确、及时，助你第一时间把握地震动态。</p>
+        <h2>多平台无缝体验，随时随地查看</h2>
+        <p>支持 Mac、iPhone、iPad 多平台使用，无论你是坐在电脑前深入研究，还是在手机上随时查看，亦或是用 iPad 大屏直观浏览，都能获得流畅且一致的使用体验。一次下载，不同设备，地震信息始终触手可及。</p>
+        <h2>动态地图可视化，当日地震一目了然</h2>
+        <p>打开应用，简洁直观的地图界面即刻呈现。当日发生的地震以醒目标识标注在地图上，轻点图标，详细信息随即弹出：精确到分秒的地震时间、经纬度定位、震级大小 等关键数据清晰展示，让你对全球地震分布与强度一目了然。滑动、缩放地图，轻松探索不同地区的地震情况。</p>
+        <h2>历史数据随心查，追溯地震轨迹</h2>
+        <p>不仅能查看当日地震，Earthquake Activity 还支持回溯过去某一天的地震信息。输入你感兴趣的日期，一键生成当日全球地震报告，无论是研究地震规律、回顾重大地震事件，还是满足好奇心，都能轻松实现。海量历史数据储备，为你开启一场跨越时空的地震探索之旅。</p>
+        <p>地球从未停止脉动，而你值得拥有最专业的地震活动查看工具！立即下载 Earthquake Activity，在 Mac、iPhone、iPad 上开启你的全球地震追踪之旅，让每一次地震动态，都尽在掌握之中！</p>
+        <h2>联系我们</h2>
+        <p>如果您对本App有任何疑问、建议、或需要帮助，欢迎通过以下方式联系我们：</p>
+        <p>邮箱：<a href="mailto:lflxlc@icloud.com">lflxlc@icloud.com</a></p>
+    </main>
+    <script>
+        const languageToggle = document.getElementById('language-toggle');
+        const zhContent = document.querySelectorAll('h2, p');
+
+        // 中文和英文内容数组，更新后包含"联系我们"部分
+        const zhTexts = [
+            "全球地震动态尽在掌握",
+            "想第一时间了解全球地震动态？Earthquake Activity 是你的专业地震信息伙伴！无论是科学爱好者、地理教师，还是对地球脉动充满好奇的你，都能通过这款应用，轻松掌握全球地震最新情报。",
+            "三大权威数据加持，信息准确及时",
+            "Earthquake Activity 整合 cenc（中国地震台网）、usgs（美国地质调查局）、emsc（欧洲地中海地震中心） 三大权威机构的数据资源，覆盖全球各个角落。从环太平洋地震带到地中海 - 喜马拉雅地震，任何地震活动都逃不过我们的 “眼睛”，确保你获取的每条地震信息都真实、准确、及时，助你第一时间把握地震动态。",
+            "多平台无缝体验，随时随地查看",
+            "支持 Mac、iPhone、iPad 多平台使用，无论你是坐在电脑前深入研究，还是在手机上随时查看，亦或是用 iPad 大屏直观浏览，都能获得流畅且一致的使用体验。一次下载，不同设备，地震信息始终触手可及。",
+            "动态地图可视化，当日地震一目了然",
+            "打开应用，简洁直观的地图界面即刻呈现。当日发生的地震以醒目标识标注在地图上，轻点图标，详细信息随即弹出：精确到分秒的地震时间、经纬度定位、震级大小 等关键数据清晰展示，让你对全球地震分布与强度一目了然。滑动、缩放地图，轻松探索不同地区的地震情况。",
+            "历史数据随心查，追溯地震轨迹",
+            "不仅能查看当日地震，Earthquake Activity 还支持回溯过去某一天的地震信息。输入你感兴趣的日期，一键生成当日全球地震报告，无论是研究地震规律、回顾重大地震事件，还是满足好奇心，都能轻松实现。海量历史数据储备，为你开启一场跨越时空的地震探索之旅。",
+            "地球从未停止脉动，而你值得拥有最专业的地震活动查看工具！立即下载 Earthquake Activity，在 Mac、iPhone、iPad 上开启你的全球地震追踪之旅，让每一次地震动态，都尽在掌握之中！",
+            "联系我们",
+            "如果您对本App有任何疑问、建议、或需要帮助，欢迎通过以下方式联系我们：",
+            "邮箱："
+        ];
+
+        const enTexts = [
+            "Global Earthquake Updates at Your Fingertips",
+            "Do you want to know the global earthquake dynamics in the first place? Earthquake Activity is your professional partner for earthquake information! Whether you are a science enthusiast, a geography teacher, or someone who is curious about the pulsation of the earth, you can easily master the latest global earthquake information through this app.",
+            "Backed by data from three authoritative sources for accurate and timely information",
+            "Earthquake Activity integrates the data resources of three authoritative institutions: CENC (China Earthquake Networks Center), USGS (United States Geological Survey), and EMSC (European-Mediterranean Seismic Centre), covering every corner of the world. From the Circum-Pacific seismic belt (Pacific Ring of Fire) to the Mediterranean-Himalayan seismic belt, no earthquake activity can escape our \"eyes\". We ensure that every piece of earthquake information you obtain is true, accurate, and timely, helping you grasp the earthquake dynamics at the first time.",
+            "Seamless experience across multiple platforms, viewable anytime and anywhere",
+            "It supports the use on multiple platforms such as Mac, iPhone, and iPad. Whether you are sitting in front of a computer for in-depth research, checking at any time on your mobile phone, or intuitively browsing on the large screen of an iPad, you can get a smooth and consistent user experience. Download it once, and you can access the earthquake information on different devices with ease.",
+            "Dynamic map visualization for a clear view of the earthquakes on the same day",
+            "When you open the app, a simple and intuitive map interface will be presented immediately. The earthquakes that occur on the same day are marked on the map with eye-catching indicators. Tap the icon, and detailed information will pop up: key data such as the earthquake time accurate to the minute and second, latitude and longitude positioning, and magnitude are clearly displayed, giving you a clear understanding of the distribution and intensity of earthquakes around the world. Slide and zoom the map to easily explore the earthquake situations in different regions.",
+            "Access historical data at will to trace the earthquake trajectory",
+            "In addition to viewing the earthquakes on the same day, Earthquake Activity also supports looking back at the earthquake information on a certain past day. Enter the date you are interested in, and a global earthquake report for that day will be generated with one click. Whether you are studying the earthquake patterns, reviewing major earthquake events, or satisfying your curiosity, it can all be easily achieved. With a huge reserve of historical data, it will open a journey of earthquake exploration across time and space for you.",
+            "The earth never stops pulsating, and you deserve the most professional tool for viewing earthquake activities! Download Earthquake Activity now, start your global earthquake tracking journey on Mac, iPhone, and iPad, and keep every earthquake dynamic under your control!",
+            "Contact Us",
+            "If you have any questions, suggestions, or need assistance regarding this app, please feel free to contact us via the following methods:",
+            "Email: "
+        ];
+
+        languageToggle.addEventListener('click', () => {
+            const currentLang = document.documentElement.lang;
+            if (currentLang === 'zh-CN') {
+                document.documentElement.lang = 'en-US';
+                languageToggle.innerHTML = '<i class="fa-solid fa-globe"></i> 中文';
+                zhContent.forEach((element, index) => {
+                    if (index === zhContent.length - 1 && element.querySelector('a')) {
+                        // 保留邮箱链接，只修改文本部分
+                        element.innerHTML = enTexts[index] + '<a href="mailto:lflxlc@icloud.com">lflxlc@icloud.com</a>';
+                    } else {
+                        element.textContent = enTexts[index];
+                    }
+                });
+            } else {
+                document.documentElement.lang = 'zh-CN';
+                languageToggle.innerHTML = '<i class="fa-solid fa-globe"></i> English';
+                zhContent.forEach((element, index) => {
+                    if (index === zhContent.length - 1 && element.querySelector('a')) {
+                        // 保留邮箱链接，只修改文本部分
+                        element.innerHTML = zhTexts[index] + '<a href="mailto:lflxlc@icloud.com">lflxlc@icloud.com</a>';
+                    } else {
+                        element.textContent = zhTexts[index];
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

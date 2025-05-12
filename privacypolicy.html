@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="personal-information" content="none">
+  <title>Earthquake Activity App 隐私政策</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .language-switch {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    #zh-CN-btn {
+      font-size: medium;
+    }
+
+    #en-US-btn {
+      font-size: medium;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="language-switch">
+    <button id="zh-CN-btn">中文</button>
+    <button id="en-US-btn">English</button>
+  </div>
+  <h1 id="title">Earthquake Activity App 隐私政策</h1>
+  <div class="section" data-zh="引言" data-en="Introduction">
+    <h2>引言</h2>
+    <p>欢迎使用 Earthquake Activity App（以下简称“本应用”）！本隐私政策旨在向您说明，我们在您使用本应用过程中不收集任何个人数据，以保障您的隐私权益。</p>
+    <p class="en" style="display: none;">Welcome to use the Earthquake Activity App (hereinafter referred to as "this app")! This privacy policy aims to inform you that we do not collect any personal data during your use of this app to protect your privacy rights and interests.</p>
+  </div>
+  <div class="section" data-zh="数据收集情况" data-en="Data Collection">
+    <h2>数据收集情况</h2>
+    <p>Earthquake Activity App 不收集任何个人数据，包括但不限于您的姓名、联系方式、位置信息、设备信息等。我们仅整合来自 CEIC（中国地震台网）、USGS（美国地质调查局）、EMSC（欧洲地中海地震中心）三大权威机构的地震数据，用于向您展示全球地震信息。这些数据仅用于地震信息的展示和分析，不涉及个人数据的处理。</p>
+    <p class="en" style="display: none;">Earthquake Activity App does not collect any personal data, including but not limited to your name, contact information, location information, device information, etc. We only integrate earthquake data from three authoritative institutions, CEIC (China Earthquake Networks Center), USGS (United States Geological Survey), and EMSC (European-Mediterranean Seismological Centre), to display global earthquake information to you. These data are only used for the display and analysis of earthquake information and do not involve the processing of personal data.</p>
+  </div>
+  <div class="section" data-zh="数据使用情况" data-en="Data Usage">
+    <h2>数据使用情况</h2>
+    <p>由于本应用不收集个人数据，因此不存在对个人数据的使用情况。我们使用来自权威机构的地震数据，仅为您提供地震信息服务，包括实时地震和历史地震信息的展示。本应用整合了 CEIC（中国地震台网）、USGS（美国地质调查局）和 EMSC（欧洲地中海地震中心）的地震数据，仅用于信息展示，数据所有权归原机构所有。</p>
+    <p class="en" style="display: none;">Since this app does not collect personal data, there is no usage of personal data. We use earthquake data from authoritative institutions only to provide you with earthquake information services, including the display of real-time and historical earthquake information. This application integrates the earthquake data from CEIC (China Earthquake Networks Center), USGS (United States Geological Survey), and EMSC (European-Mediterranean Seismological Centre), and the data is only used for information display. The ownership of the data belongs to the original institutions.</p>
+  </div>
+  <div class="section" data-zh="数据存储情况" data-en="Data Storage">
+    <h2>数据存储情况</h2>
+    <p>我们不存储任何个人数据。对于来自权威机构的地震数据，我们会存储在本地。</p>
+    <p class="en" style="display: none;">We do not store any personal data. For earthquake data from authoritative institutions, we will store them on local.</p>
+  </div>
+  <div class="section" data-zh="数据共享情况" data-en="Data Sharing">
+    <h2>数据共享情况</h2>
+    <p>本应用不收集个人数据，因此不存在个人数据的共享情况。</p>
+    <p class="en" style="display: none;">Since this app does not collect personal data, there is no sharing of personal data. </p>
+  </div>
+  <div class="section" data-zh="政策变更" data-en="Policy Changes">
+    <h2>政策变更</h2>
+    <p>我们可能会根据法律法规或技术更新修订本政策。重大变更将通过应用内通知或开发者网站公告。</p>
+    <p class="en" style="display: none;">We may revise this policy based on legal requirements or technological updates. Significant changes will be announced through in-app notifications or the developer's website. </p>
+  </div>
+  <div class="section" data-zh="联系我们" data-en="Contact Us">
+    <h2>联系我们</h2>
+    <p>如果您对本隐私政策有任何疑问或建议，欢迎通过以下方式联系我们：</p>
+    <p>邮箱：<a href="mailto:lflxlc@icloud.com">lflxlc@icloud.com</a></p>
+    <p class="en" style="display: none;">If you have any questions or suggestions about this privacy policy, please feel free to contact us in the following ways:</p>
+    <p class="en" style="display: none;">Email: <a href="mailto:lflxlc@icloud.com">lflxlc@icloud.com</a></p>
+  </div>
+
+  <script>
+    const zhCNBtn = document.getElementById('zh-CN-btn');
+    const enUSBtn = document.getElementById('en-US-btn');
+    const sections = document.querySelectorAll('.section');
+
+    function showChinese() {
+      document.documentElement.lang = 'zh-CN';
+      document.title = 'Earthquake Activity App 隐私政策';
+      document.getElementById("title").innerText = 'Earthquake Activity App 隐私政策';
+      sections.forEach(section => {
+        const h2 = section.querySelector('h2');
+        h2.textContent = section.dataset.zh;
+        const pElements = section.querySelectorAll('p');
+        pElements.forEach(p => {
+          if (p.classList.contains('en')) {
+            p.style.display = 'none';
+          } else {
+            p.style.display = 'block';
+          }
+        });
+      });
+    }
+
+    function showEnglish() {
+      document.documentElement.lang = 'en-US';
+      document.title = 'Earthquake Activity App Privacy Policy';
+      document.getElementById("title").innerText = 'Earthquake Activity App Privacy Policy';
+      sections.forEach(section => {
+        const h2 = section.querySelector('h2');
+        h2.textContent = section.dataset.en;
+        const pElements = section.querySelectorAll('p');
+        pElements.forEach(p => {
+          if (p.classList.contains('en')) {
+            p.style.display = 'block';
+          } else {
+            p.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    zhCNBtn.addEventListener('click', showChinese);
+    enUSBtn.addEventListener('click', showEnglish);
+  </script>
+</body>
+
+</html>
